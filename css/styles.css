@@ -1,0 +1,79 @@
+.container .cycle {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.container .figure {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation-name: formAndColor;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+#figure1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#figure2 {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#figure3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#figure4 {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes formAndColor {
+    0% {
+        border-radius: 0%;
+        background-color: turquoise;
+    }
+    25% {
+        background-color: navy;
+    }
+    50% {
+        background-color: seagreen;
+    }
+    75% {
+        background-color: palegreen;
+    }
+    100% {
+        border-radius: 50%;
+        background-color: turquoise;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
